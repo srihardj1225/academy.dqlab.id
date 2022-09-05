@@ -1,0 +1,11 @@
+# # [Penambahan Kolom Order Month pada Dataset](https://academy.dqlab.id/main/livecode/164/312/1450)
+
+# In[2]:
+
+import pandas as pd
+import datetime
+
+dataset = pd.read_csv('https://storage.googleapis.com/dqlab-dataset/retail_raw_reduced.csv')
+
+dataset['order_month'] = dataset['order_date'].apply(lambda x:datetime.datetime.strptime(x,"%Y-%m-%d").strftime('%Y-%m'))
+print(dataset.head())
