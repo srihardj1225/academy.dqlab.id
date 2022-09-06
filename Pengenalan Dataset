@@ -1,10 +1,14 @@
-# # [Pengenalan Dataset](https://academy.dqlab.id/main/livecode/164/312/1447)
-
-# In[1]:
-
-
+#import library
 import pandas as pd
+
+#import database source
 dataset=pd.read_csv('https://storage.googleapis.com/dqlab-dataset/retail_raw_reduced.csv')
+
+#print deskripsi baris dan kolom
 print('Ukuran dataset:%d baris dan %d kolom\n' %dataset.shape)
+
+#print deskripsi 5 teratas
 print('Lima data teratas:')
+
+#print pemanggilan 
 print(dataset.head())
